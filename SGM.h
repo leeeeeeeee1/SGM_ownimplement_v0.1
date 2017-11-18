@@ -1,8 +1,13 @@
 #pragma once
-#include <iostream>
+
 #include <time.h>
 #include <vector>
 #include <string>
+#include <stack>
+#include <algorithm>
+#include <nmmintrin.h>
+#include <stdexcept>
+#include <iostream>
 #include <opencv2\imgcodecs.hpp>
 #include <opencv2\imgproc.hpp>
 #include <opencv2\core.hpp>
@@ -35,12 +40,12 @@ private :
 	unsigned short *_Soble_leftimg;
 	unsigned short *_Soble_rightimg;
 
-	unsigned short *Ad_Census_Img;
-	unsigned short *Ad_Census_Img;
+	unsigned short *Ad_Census_LeftImg;
+	unsigned short *Ad_Census_RightImg;
 
 	//к╫сп╫с©з
 	void loaddata(Mat leftimage, Mat rightimage, unsigned short * leftdata, unsigned short *rightdata);
 	void sobelcap();
-
+	void addCensus();
 };
 
